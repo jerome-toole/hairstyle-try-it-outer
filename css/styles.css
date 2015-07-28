@@ -8,4 +8,10 @@ html {
 
 header {
   background-color: #fff;
+  border-bottom: solid 3px black;
+}
+
+header img {
+  max-width: 60rem;
+  margin-bottom: 1em;
 }
