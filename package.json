@@ -1,0 +1,22 @@
+{
+  "name": "hairstyle-try-it-outer",
+  "version": "1.0.0",
+  "description": "Try out new hairstyles before you see a single pair or scissors. A project by Isabel.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.2.0",
+    "express": "^4.13.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Jerome Toole",
+  "license": "ISC"
+}
