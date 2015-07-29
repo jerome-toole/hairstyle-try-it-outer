@@ -5,6 +5,7 @@ img.main {
 
 html {
   background-color: #7193BC;
+  overflow-x: hidden;
 }
 
 header {
@@ -55,9 +56,49 @@ div.people {
   margin: auto;
 }
 
+ul.hairstyles {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  white-space: nowrap;
+}
 
-div#webcam {
+ul.hairstyles li {
+  list-style: none;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-right: .5em;
+}
+
+ul.hairstyles li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%; 
+}
+
+
+ul.hairstyles li img {
+  width: 100%;
+  overflow: hidden;
+}
+
+div.tryer {
   height: 300px;
   width: 300px;
   margin: auto;
+  position: relative;
+}
+
+div#webcam,
+div.tryer__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
