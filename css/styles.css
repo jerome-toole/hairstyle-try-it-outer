@@ -1,3 +1,7 @@
+ul, ol {
+  list-style: none;
+}
+
 img.main {
   height: auto;
   width: 100%;
@@ -63,6 +67,7 @@ ul.hairstyles {
   height: 100px;
   margin: auto;
   white-space: nowrap;
+  margin-bottom: 1.5em;
 }
 
 ul.hairstyles li {
@@ -90,15 +95,23 @@ div.tryer {
   width: 350px;
   margin: auto;
   position: relative;
+  overflow: hidden;
 }
 
 div#webcam,
 div.tryer__image {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
+}
+
+div#webcam {
+  width: 467px;
+  height: 350px;
+}
+
+div.tryer__image {
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
