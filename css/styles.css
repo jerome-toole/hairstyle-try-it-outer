@@ -4,14 +4,60 @@ img.main {
 }
 
 html {
+  background-color: #7193BC;
 }
 
 header {
   background-color: #fff;
-  border-bottom: solid 3px black;
+  border-bottom: solid 4px black;
 }
 
 header img {
   max-width: 60rem;
   margin-bottom: 1em;
+}
+
+nav.main {
+  margin-left: 1em;
+  height: 40px;
+  margin-bottom: 1em;
+}
+
+nav.main a {
+  display: inline-block;
+  padding: 0;
+  height: 100%;
+}
+
+nav.main img {
+  height: 100%;
+}
+
+nav.main img {
+  border: solid 2px black;
+  border-top: none;
+  border-left: none;
+}
+
+
+nav.main a:first-of-type img {
+  border-left: solid 2px black;
+}
+
+
+div.people {
+  width: 70%;
+  margin: auto;
+}
+
+.people img {
+  width: 100%;
+  margin: auto;
+}
+
+
+div#webcam {
+  height: 300px;
+  width: 300px;
+  margin: auto;
 }
