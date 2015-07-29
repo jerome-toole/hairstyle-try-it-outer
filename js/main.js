@@ -1,6 +1,6 @@
 $(function(){
-    $('#webcam').photobooth().on("image",function( event, dataUrl ){
-        $( "#gallery" ).append( '<img src="' + dataUrl + '" >');
+    $(document).ready(function() {
+        $("#webcam").scriptcam();
     });
 
     $('.hair-select').click( function () {
