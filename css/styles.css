@@ -96,6 +96,7 @@ div.tryer {
   margin: auto;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1.5em;
 }
 
 div#webcam,
@@ -108,6 +109,7 @@ div.tryer__image {
 div#webcam {
   width: 467px;
   height: 350px;
+  margin-left: -56px;
 }
 
 div.tryer__image {
