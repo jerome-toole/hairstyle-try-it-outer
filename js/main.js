@@ -70,19 +70,58 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
+
+
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Hairdressers near you!'
-      });
 
-      map.setCenter(pos);
+
+        var request = {
+        location: pos,
+        radius: '500',
+        types: ['store']
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+    
+    function createMarker(place) {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location,
+        icon: {
+          // Star
+          path: 'M 0,-24 6,-7 24,-7 10,4 15,21 0,11 -15,21 -10,4 -24,-7 -6,-7 z',
+          fillColor: '#ffff00',
+          fillOpacity: 1,
+          scale: 1/4,
+          strokeColor: '#bd8d2c',
+          strokeWeight: 1
+        }
+      });
+    }
+
+    function callback(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          var place = results[i];
+          createMarker(results[i]);
+        }
+      }
+    }
+
+    var infowindow = new google.maps.InfoWindow({
+    map: map,
+    position: pos,
+    content: 'Hairdressers near you!'
+    });
+
+    map.setCenter(pos);
+
     }, function() {
       handleNoGeolocation(true);
     });
