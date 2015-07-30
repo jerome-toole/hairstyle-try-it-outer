@@ -64,12 +64,6 @@ function initialize() {
         stylers: [
           { visibility: 'simplified' }
         ]
-      },
-      {
-        elementType: 'labels',
-        stylers: [
-          { visibility: 'off' }
-        ]
       }
       ]
   };
