@@ -117,3 +117,8 @@ div.tryer__image {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+
+#map-canvas {
+  height: 30vh;
+}
